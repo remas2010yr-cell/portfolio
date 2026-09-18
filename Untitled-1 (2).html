@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Riri Design</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",Tahoma,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#fff9fc;
+    color:#333;
+}
+
+/* NAVBAR */
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,.94);
+    backdrop-filter:blur(10px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 7%;
+    box-shadow:0 2px 15px rgba(0,0,0,.06);
+}
+
+.logo{
+    font-size:25px;
+    font-weight:800;
+    color:#c85c91;
+}
+
+nav ul{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:#444;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:#c85c91;
+}
+
+/* HERO */
+.hero{
+    min-height:88vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:50px 20px;
+    background:
+    radial-gradient(circle at top right,#ffd8e9,transparent 35%),
+    radial-gradient(circle at bottom left,#eadcff,transparent 35%),
+    #fff9fc;
+}
+
+.hero-content{
+    max-width:800px;
+    animation:fadeUp 1s ease;
+}
+
+.hero h1{
+    font-size:64px;
+    color:#c85c91;
+    margin-bottom:15px;
+}
+
+.hero h2{
+    font-size:30px;
+    margin-bottom:18px;
+}
+
+.hero p{
+    font-size:18px;
+    color:#666;
+    line-height:1.8;
+}
+
+.main-btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 30px;
+    border-radius:30px;
+    background:#c85c91;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+    box-shadow:0 8px 20px rgba(200,92,145,.25);
+}
+
+.main-btn:hover{
+    transform:translateY(-4px);
+    background:#aa4678;
+}
+
+/* SECTIONS */
+section{
+    padding:80px 7%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title h2{
+    font-size:35px;
+    color:#c85c91;
+}
+
+.section-title p{
+    margin-top:10px;
+    color:#777;
+}
+
+/* SERVICES */
+.services{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.service{
+    background:white;
+    padding:30px 20px;
+    border-radius:22px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+    transition:.3s;
+}
+
+.service:hover{
+    transform:translateY(-8px);
+}
+
+.service .icon{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.service h3{
+    margin-bottom:10px;
+    color:#444;
+}
+
+.service p{
+    color:#777;
+    line-height:1.6;
+}
+
+/* PORTFOLIO */
+.portfolio{
+    background:#fff;
+}
+
+.works{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.work{
+    background:white;
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.work:hover{
+    transform:translateY(-8px);
+}
+
+.design{
+    height:330px;
+    padding:25px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.design h3{
+    font-size:28px;
+    margin-bottom:12px;
+}
+
+.design p{
+    font-size:16px;
+}
+
+.design1{
+    background:linear-gradient(135deg,#f8d9e7,#fff3f8);
+    color:#7d3456;
+}
+
+.design2{
+    background:linear-gradient(135deg,#ffe0b2,#fff8ec);
+    color:#8b4e20;
+}
+
+.design3{
+    background:linear-gradient(135deg,#d9f1eb,#f6fffd);
+    color:#28665b;
+}
+
+.design4{
+    background:linear-gradient(135deg,#ddd0ff,#f8f5ff);
+    color:#60489a;
+}
+
+.design5{
+    background:linear-gradient(135deg,#d8e9ff,#f6faff);
+    color:#315c8d;
+}
+
+.design6{
+    background:linear-gradient(135deg,#ffd6d6,#fff4f4);
+    color:#9a4141;
+}
+
+.work-info{
+    padding:18px 20px;
+}
+
+.work-info h3{
+    margin-bottom:5px;
+}
+
+.work-info p{
+    color:#777;
+}
+
+/* PRICES */
+.prices{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.price-card{
+    background:white;
+    border-radius:25px;
+    padding:35px 25px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.07);
+    border:2px solid transparent;
+    transition:.3s;
+}
+
+.price-card:hover{
+    border-color:#e8a7c6;
+    transform:translateY(-7px);
+}
+
+.price-card h3{
+    color:#c85c91;
+    font-size:24px;
+}
+
+.price{
+    font-size:40px;
+    font-weight:bold;
+    margin:20px 0;
+}
+
+.price-card p{
+    color:#777;
+    line-height:2;
+}
+
+/* ABOUT */
+.about{
+    background:#fff0f7;
+    text-align:center;
+}
+
+.about-content{
+    max-width:750px;
+    margin:auto;
+}
+
+.about-content p{
+    line-height:2;
+    color:#666;
+    font-size:17px;
+}
+
+/* ORDER */
+.order-box{
+    max-width:700px;
+    margin:auto;
+    background:white;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 8px 25px rgba(0,0,0,.07);
+}
+
+.input{
+    width:100%;
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    margin-bottom:15px;
+    outline:none;
+    font-size:15px;
+}
+
+textarea.input{
+    height:130px;
+    resize:none;
+}
+
+.input:focus{
+    border-color:#c85c91;
+}
+
+.order-btn{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:30px;
+    background:#c85c91;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+#orderMessage{
+    text-align:center;
+    margin-top:15px;
+    color:#31905f;
+    font-weight:bold;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    background:#29232a;
+    color:white;
+    padding:30px 20px;
+}
+
+footer span{
+    color:#e58db8;
+}
+
+/* CHAT BOT */
+.chat-button{
+    position:fixed;
+    bottom:25px;
+    left:25px;
+    width:62px;
+    height:62px;
+    border-radius:50%;
+    border:none;
+    background:#c85c91;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
+    z-index:2000;
+    transition:.3s;
+}
+
+.chat-button:hover{
+    transform:scale(1.08);
+}
+
+.chat-box{
+    position:fixed;
+    bottom:100px;
+    left:25px;
+    width:340px;
+    background:white;
+    border-radius:22px;
+    box-shadow:0 10px 40px rgba(0,0,0,.2);
+    overflow:hidden;
+    display:none;
+    z-index:1999;
+}
+
+.chat-header{
+    background:#c85c91;
+    color:white;
+    padding:18px;
+    font-weight:bold;
+}
+
+.chat-messages{
+    height:300px;
+    overflow-y:auto;
+    padding:15px;
+    background:#fffafd;
+}
+
+.message{
+    padding:10px 13px;
+    border-radius:15px;
+    margin-bottom:10px;
+    max-width:85%;
+    line-height:1.5;
+}
+
+.bot{
+    background:#f3e0ea;
+    margin-left:auto;
+}
+
+.user{
+    background:#c85c91;
+    color:white;
+    margin-right:auto;
+}
+
+.chat-input{
+    display:flex;
+    border-top:1px solid #eee;
+}
+
+.chat-input input{
+    flex:1;
+    border:none;
+    padding:13px;
+    outline:none;
+}
+
+.chat-input button{
+    border:none;
+    background:#c85c91;
+    color:white;
+    padding:0 18px;
+    cursor:pointer;
+}
+
+/* ANIMATION */
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* MOBILE */
+@media(max-width:900px){
+
+    .services{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .works{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .prices{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:650px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        gap:12px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:45px;
+    }
+
+    .hero h2{
+        font-size:24px;
+    }
+
+    .services,
+    .works{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:60px 5%;
+    }
+
+    .chat-box{
+        width:calc(100% - 40px);
+        left:20px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+
+    <div class="logo">
+        Riri Design ✨
+    </div>
+
+    <ul>
+        <li><a href="#home">الرئيسية</a></li>
+        <li><a href="#services">خدماتي</a></li>
+        <li><a href="#works">أعمالي</a></li>
+        <li><a href="#prices">الأسعار</a></li>
+        <li><a href="#order">اطلب تصميم</a></li>
+    </ul>
+
+</nav>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>Riri Design ✨</h1>
+
+        <h2>نحوّل فكرتك إلى تصميم جميل</h2>
+
+        <p>
+            تصاميم سوشيال ميديا وإعلانات وشعارات
+            بطريقة بسيطة وأنيقة تناسب فكرتك
+        </p>
+
+        <a href="#works" class="main-btn">
+            شوفي أعمالي 🎨
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+<section id="services">
+
+    <div class="section-title">
+
+        <h2>خدماتي 💗</h2>
+
+        <p>
+            تصاميم مختلفة تناسب مشروعك أو حسابك
+        </p>
+
+    </div>
+
+
+    <div class="services">
+
+        <div class="service">
+            <div class="icon">📱</div>
+            <h3>بوستات إنستغرام</h3>
+            <p>
+                تصاميم جذابة ومنظمة لحسابات السوشيال ميديا
+            </p>
+        </div>
+
+
+        <div class="service">
+            <div class="icon">📢</div>
+            <h3>إعلانات</h3>
+            <p>
+                تصميم إعلانات للمنتجات والخدمات والعروض
+            </p>
+        </div>
+
+
+        <div class="service">
+            <div class="icon">✨</div>
+            <h3>شعارات</h3>
+            <p>
+                تصميم شعار بسيط ومميز يناسب مشروعك
+            </p>
+        </div>
+
+
+        <div class="service">
+            <div class="icon">💌</div>
+            <h3>تصميم حسب الطلب</h3>
+            <p>
+                عندك فكرة معينة؟ نحولها لتصميم
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PORTFOLIO -->
+<section class="portfolio" id="works">
+
+    <div class="section-title">
+
+        <h2>أعمالي 🎨</h2>
+
+        <p>
+            نماذج من التصاميم الموجودة في Riri Design
+        </p>
+
+    </div>
+
+
+    <div class="works">
+
+
+        <div class="work">
+
+            <div class="design design1">
+
+                <h3>LUNA WEAR</h3>
+
+                <p>
+                    أناقتك تبدأ من هنا
+                </p>
+
+                <p>
+                    تشكيلة جديدة وصلت ✨
+                </p>
+
+            </div>
+
+            <div class="work-info">
+
+                <h3>تصميم متجر ملابس</h3>
+
+                <p>بوست إنستغرام</p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="work">
+
+            <div class="design design2">
+
+                <h3>Sweet Day 🍰</h3>
+
+                <p>
+                    قطعة حلوة تغيّر يومك
+                </p>
+
+                <p>
+                    اطلب الآن
+                </p>
+
+            </div>
+
+            <div class="work-info">
+
+                <h3>إعلان حلويات</h3>
+
+                <p>إعلان سوشيال ميديا</p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="work">
+
+            <div class="design design3">
+
+                <h3>Glow Care ✨</h3>
+
+                <p>
+                    لأن بشرتك تستحق الاهتمام
+                </p>
+
+                <p>
+                    عناية • جمال • إشراقة
+                </p>
+
+            </div>
+
+            <div class="work-info">
+
+                <h3>تصميم عناية بالبشرة</h3>
+
+                <p>بوست إنستغرام</p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="work">
+
+            <div class="design design4">
+
+                <h3>خصم 30%</h3>
+
+                <p>
+                    لفترة محدودة فقط
+                </p>
+
+                <p>
+                    لا تفوتي العرض ✨
+                </p>
+
+            </div>
+
+            <div class="work-info">
+
+                <h3>تصميم عرض</h3>
+
+                <p>إعلان خصم</p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="work">
+
+            <div class="design design5">
+
+                <h3>سيأتي يوم</h3>
+
+                <p>
+                    يشبه أحلامنا 🤍
+                </p>
+
+            </div>
+
+            <div class="work-info">
+
+                <h3>تصميم اقتباس</h3>
+
+                <p>بوست تحفيزي</p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="work">
+
+            <div class="design design6">
+
+                <h3>Riri Design</h3>
+
+                <p>
+                    نصمم فكرتك
+                </p>
+
+                <p>
+                    ✨ Your idea, your design ✨
+                </p>
+
+            </div>
+
+            <div class="work-info">
+
+                <h3>إعلان خدمة تصميم</h3>
+
+                <p>تصميم إعلاني</p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- PRICES -->
+<section id="prices">
+
+    <div class="section-title">
+
+        <h2>الباقات 💰</h2>
+
+        <p>
+            أسعار مبدئية قابلة للتعديل حسب التصميم
+        </p>
+
+    </div>
+
+
+    <div class="prices">
+
+
+        <div class="price-card">
+
+            <h3>البسيطة 🌸</h3>
+
+            <div class="price">2 JD</div>
+
+            <p>
+                تصميم واحد<br>
+                تعديل بسيط<br>
+                مناسب للبوستات
+            </p>
+
+        </div>
+
+
+        <div class="price-card">
+
+            <h3>المميزة ✨</h3>
+
+            <div class="price">5 JD</div>
+
+            <p>
+                3 تصاميم<br>
+                تعديلات<br>
+                تصميم متناسق
+            </p>
+
+        </div>
+
+
+        <div class="price-card">
+
+            <h3>الباقة الكاملة 💗</h3>
+
+            <div class="price">8 JD</div>
+
+            <p>
+                5 تصاميم<br>
+                تعديلات<br>
+                تصاميم متناسقة للحساب
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="about">
+
+    <div class="section-title">
+
+        <h2>عن Riri Design 💗</h2>
+
+    </div>
+
+    <div class="about-content">
+
+        <p>
+            Riri Design مشروع تصميم يهتم بتحويل الأفكار البسيطة
+            إلى تصاميم جميلة ومرتبة.
+            الهدف هو تقديم تصاميم مناسبة للمشاريع الصغيرة
+            وحسابات السوشيال ميديا بطريقة مميزة وبسيطة.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ORDER -->
+<section id="order">
+
+    <div class="section-title">
+
+        <h2>اطلب تصميمك 💌</h2>
+
+        <p>
+            احكيلي شو الفكرة اللي ببالك
+        </p>
+
+    </div>
+
+
+    <div class="order-box">
+
+        <input
+        class="input"
+        id="name"
+        type="text"
+        placeholder="اسمك"
+        >
+
+        <input
+        class="input"
+        id="service"
+        type="text"
+        placeholder="شو نوع التصميم؟"
+        >
+
+        <textarea
+        class="input"
+        id="details"
+        placeholder="احكيلي تفاصيل التصميم..."
+        ></textarea>
+
+        <button
+        class="order-btn"
+        onclick="sendOrder()"
+        >
+            إرسال الطلب ✨
+        </button>
+
+        <div id="orderMessage"></div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <p>
+        © 2026 <span>Riri Design</span>
+        — جميع الحقوق محفوظة
+    </p>
+
+</footer>
+
+
+<!-- CHAT BUTTON -->
+<button
+class="chat-button"
+onclick="toggleChat()"
+>
+    🤖
+</button>
+
+
+<!-- CHAT BOX -->
+<div class="chat-box" id="chatBox">
+
+    <div class="chat-header">
+        🤖 مساعد Riri Design
+    </div>
+
+
+    <div
+    class="chat-messages"
+    id="chatMessages"
+    >
+
+        <div class="message bot">
+            أهلااا 💗 أنا مساعد Riri Design
+            <br>
+            اسأليني عن الخدمات أو الأسعار أو طريقة الطلب ✨
+        </div>
+
+    </div>
+
+
+    <div class="chat-input">
+
+        <input
+        id="chatInput"
+        type="text"
+        placeholder="اكتبي سؤالك..."
+        onkeydown="if(event.key==='Enter') sendChat()"
+        >
+
+        <button onclick="sendChat()">
+            إرسال
+        </button>
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* ORDER */
+
+function sendOrder(){
+
+    const name =
+    document.getElementById("name").value.trim();
+
+    const service =
+    document.getElementById("service").value.trim();
+
+    const details =
+    document.getElementById("details").value.trim();
+
+    const message =
+    document.getElementById("orderMessage");
+
+
+    if(name === "" || service === "" || details === ""){
+
+        message.style.color = "#c94b4b";
+
+        message.innerText =
+        "عبّي كل الخانات أول 💗";
+
+        return;
+    }
+
+
+    message.style.color = "#31905f";
+
+    message.innerText =
+    "تم استلام طلبك بنجاح ✨ شكراً لثقتك بـ Riri Design 💗";
+
+
+    document.getElementById("name").value = "";
+
+    document.getElementById("service").value = "";
+
+    document.getElementById("details").value = "";
+
+}
+
+
+/* CHAT */
+
+function toggleChat(){
+
+    const chat =
+    document.getElementById("chatBox");
+
+    if(chat.style.display === "block"){
+
+        chat.style.display = "none";
+
+    }else{
+
+        chat.style.display = "block";
+
+    }
+
+}
+
+
+function addMessage(text,type){
+
+    const messages =
+    document.getElementById("chatMessages");
+
+    const div =
+    document.createElement("div");
+
+    div.className =
+    "message " + type;
+
+    div.innerText = text;
+
+    messages.appendChild(div);
+
+    messages.scrollTop =
+    messages.scrollHeight;
+
+}
+
+
+function sendChat(){
+
+    const input =
+    document.getElementById("chatInput");
+
+    const text =
+    input.value.trim();
+
+
+    if(text === "") return;
+
+
+    addMessage(text,"user");
+
+    input.value = "";
+
+
+    setTimeout(function(){
+
+        const lower =
+        text.toLowerCase();
+
+
+        let answer = "";
+
+
+        if(
+            lower.includes("سعر") ||
+            lower.includes("اسعار") ||
+            lower.includes("كم") ||
+            lower.includes("بكم")
+        ){
+
+            answer =
+            "عندنا باقات تبدأ من 2 JD 💗 وفي باقات 5 JD و 8 JD حسب عدد التصاميم.";
+
+        }
+
+        else if(
+            lower.includes("خدمات") ||
+            lower.includes("شو بتعمل") ||
+            lower.includes("تصميم")
+        ){
+
+            answer =
+            "بنقدم بوستات إنستغرام 📱 وإعلانات 📢 وشعارات ✨ وتصاميم حسب الطلب 💌.";
+
+        }
+
+        else if(
+            lower.includes("طلب") ||
+            lower.includes("اطلب") ||
+            lower.includes("كيف")
+        ){
+
+            answer =
+            "بإمكانك تنزلي لقسم «اطلب تصميم» وتكتبي اسمك ونوع التصميم والتفاصيل 💗.";
+
+        }
+
+        else if(
+            lower.includes("مرحبا") ||
+            lower.includes("هلا") ||
+            lower.includes("اهلا")
+        ){
+
+            answer =
+            "أهلااا فيكي 💗✨ شو حابة تعرفي عن Riri Design؟";
+
+        }
+
+        else if(
+            lower.includes("اعمال") ||
+            lower.includes("شغل")
+        ){
+
+            answer =
+            "تقدري تشوفي نماذج أعمالنا من قسم «أعمالي» 🎨✨.";
+
+        }
+
+        else{
+
+            answer =
+            "أنا مساعد Riri Design 🤖💗 بقدر أساعدك بالخدمات والأسعار وطريقة الطلب.";
+
+        }
+
+
+        addMessage(answer,"bot");
+
+
+    },500);
+
+}
+
+</script>
+
+</body>
+</html>
